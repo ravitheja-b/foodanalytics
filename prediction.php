@@ -16,11 +16,11 @@
 </style>
 <body>
     <center>
-    <h3>Please select a date for future projections</h3>
+    <h3>Please select a date for forecast</h3>
      
-    <form action="exec.php" method="post" class="myform">
+    <form action="predict.php" method="post" class="myform">
     
-    <input id="datepicker" width="270" />
+    <input id="datepicker" width="270" name="datepicker" />
     <script>
         $('#datepicker').datepicker({
             uiLibrary: 'bootstrap'
