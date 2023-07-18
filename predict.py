@@ -77,6 +77,9 @@ fig = sns.regplot(x=Y_test, y=Y_pred, scatter_kws={"color": "green"}, line_kws={
 plt.savefig('predict-image.png')
 
 idli=data[(data["day"] == 1) & (data["menu"] == 1) ]
+samosa = data[(data['day'] == 1) & (data['menu'] == 8)]
+chap=data[(data["day"] == 1) & (data["menu"] == 5) ]
+
 def idli_wastage_pred():
     Xidli = idli.drop(['date', 'menu-id', 'flavor_profile',
                       'calorielevel-per-100gm', 'wastage%'], axis=1)
@@ -93,12 +96,9 @@ def idli_wastage_pred():
     Yidli_pred = lin_reg_model.predict(Xidli_test)
     test_error_score = metrics.r2_score(Yidli_test, Yidli_pred)
 
-    print ('<br/><b>Predicted Idli wastage :', Yidli_pred)
+    print ("<br/><b>Predicted Idli wastage :", Yidli_pred)
     
     
-samosa = data[(data['day'] == 1) & (data['menu'] == 8)]
-
-
 def samosa_wastage_pred():
     Xsamosa = samosa.drop(['date', 'menu-id', 'flavor_profile',
                           'calorielevel-per-100gm', 'wastage%'], axis=1)
@@ -116,9 +116,8 @@ def samosa_wastage_pred():
     Ysamosa_pred = lin_reg_model.predict(Xsamosa_test)
     test_error_score = metrics.r2_score(Ysamosa_test, Ysamosa_pred)
     
-    print ('<br/><b>Predicted Samosa wastage :', Ysamosa_pred)
+    print ("<br/><b>Predicted Samosa wastage :", Ysamosa_pred)
     
-chap=data[(data["day"] == 1) & (data["menu"] == 5) ]
 
 def roti_wastage_pred():
     Xchap = chap.drop(['date', 'menu-id', 'flavor_profile',
@@ -136,11 +135,7 @@ def roti_wastage_pred():
     Ychap_pred = lin_reg_model.predict(Xchap_test)
     test_error_score = metrics.r2_score(Ychap_test, Ychap_pred)
    
-    print ('<br/><b>Predicted Roti wastage :', Ychap_pred)
-    sns.set(style='darkgrid')
-    sns.regplot(x=Ychap_test, y=Ychap_pred,
-                scatter_kws={'color': 'green'},
-                line_kws={'color': 'blue'})
+    print ("<br/><b>Predicted Roti wastage :", Ychap_pred)
 
 
 idli_wastage_pred()
