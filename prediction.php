@@ -26,7 +26,8 @@
             uiLibrary: 'bootstrap'
         });
     </script>
-    <input type="submit" value="submit" name="submit">
+
+    <input type="submit" value="submit" name="submit">  
     </center>
     </form>
 </body>

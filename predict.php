@@ -17,10 +17,14 @@
 		$r = shell_exec("python predict.py");
 		echo "$r\n";
         $imgUrl = "predict-image.png"; 
+		
+		
 	}
 	
 
 ?>    
 <center><img width= 900 height=700 src="<?= $imgUrl;?>"/></center>
+
+
  
 
