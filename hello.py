@@ -1,3 +1,11 @@
+#predict.py
+#sns.set(rc={'axes.facecolor':'lightblue', 'figure.facecolor':'lightgreen'})
+
+#consumptiionstats.py
+#fig = px.line(apr_3rd, x = 'menu', y = 'wastage%', title=input+' wastage',color_discrete_sequence=["#19008e"])
+
+#fig.update_layout(paper_bgcolor="#66cc66",plot_bgcolor='#66cc66')
+
 import numpy as np
 import matplotlib.pyplot as plt
 
